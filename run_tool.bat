@@ -5,14 +5,14 @@ setlocal
 :check_Permissions
     net session >nul 2>&1
     if %errorLevel% == 0 (
-        echo [OK] Running as Admin.
+        echo [OK] NetGuard running with Administrative Privileges.
     ) else (
-        echo [!] Requesting Admin privileges...
+        echo [!] Requesting Admin privileges for Raw Packet Access...
         powershell -Command "Start-Process -FilePath '%0' -Verb RunAs"
         exit /b
     )
 
-:: --- STEP 2: FIX WORKING DIRECTORY ---
+:: --- STEP 2: SET WORKING DIRECTORY ---
 cd /d "%~dp0"
 
 :: Detect Virtual Environment
@@ -22,32 +22,36 @@ if exist .venv\Scripts\python.exe (
     echo [INFO] Virtual Environment detected.
 )
 
-:: --- STEP 3: START PROCESSES ---
-echo Starting Network Monitoring Tool...
+:: --- STEP 3: START NETGUARD v2.0 ---
+echo Launching NetGuard SOC Dashboard...
+start "NETGUARD_DASHBOARD" %PYTHON_EXE% -m streamlit run frontend/dashboard.py
 
-start "NET_DASHBOARD" %PYTHON_EXE% -m streamlit run frontend/dashboard.py
-start "NET_CAPTURE" %PYTHON_EXE% -m backend.live_capture
+echo Launching NetGuard Capture Engine...
+:: Using -m ensures Python treats 'backend' as a package
+start "NETGUARD_CAPTURE" %PYTHON_EXE% -m backend.live_capture
 
 echo.
 echo =====================================================
-echo    SYSTEM IS LIVE
+echo    NETGUARD v2.0 SYSTEM IS LIVE
 echo =====================================================
 echo.
-echo Press any key to SHUTDOWN everything...
+echo Press any key to SHUTDOWN and CLEANUP...
 pause >nul
 
-:: --- STEP 4: AGGRESSIVE SHUTDOWN ---
-echo Stopping all processes...
+:: --- STEP 4: CLEAN SHUTDOWN ---
+echo Stopping NetGuard processes...
 
-:: Kill by Window Title (Wildcard)
-taskkill /FI "WINDOWTITLE eq NET_DASHBOARD*" /T /F >nul 2>&1
-taskkill /FI "WINDOWTITLE eq NET_CAPTURE*" /T /F >nul 2>&1
+:: Kill processes by window title
+taskkill /FI "WINDOWTITLE eq NETGUARD_DASHBOARD*" /T /F >nul 2>&1
+taskkill /FI "WINDOWTITLE eq NETGUARD_CAPTURE*" /T /F >nul 2>&1
 
-:: Kill specific streamlit process if it survived
+:: Force kill streamlit if it persists
 taskkill /IM streamlit.exe /F >nul 2>&1
 
-:: Cleanup
+:: Optional: Clean temporary DB files (Recommended for Demo)
 if exist alerts.db del /f /q alerts.db
+if exist alerts.db-wal del /f /q alerts.db-wal
+if exist alerts.db-shm del /f /q alerts.db-shm
 
-echo [DONE] System stopped and cleaned.
+echo [DONE] System stopped and temporary data purged.
 pause
