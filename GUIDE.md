@@ -1,19 +1,19 @@
-# 📘 NetGuard v2.0: Setup & Operations Guide
+📘 NetGuard v2.0: Setup & Operations Guide
 
-This guide provides step-by-step instructions for installing, configuring, and demonstrating the NetGuard NIDS system. Developed as part of the **KTU Mini Project** curriculum.
+This guide provides step-by-step instructions for installing, configuring, and demonstrating the NetGuard NIDS system. Developed specifically for the **KTU Mini Project** curriculum, this version features advanced **Heuristic Scoring** and **Deep Packet Analysis (DPI)**.
 
 ---
 
 ## 🛠️ 1. Technical Prerequisites
 
-Before initialization, ensure the following environment is prepared:
+Before initialization, ensure the following environment is prepared for raw socket communication:
 
-| Requirement | Specification | |
-| :--- | :--- | :--- |
-| **Operating System** | Windows 10/11 (Preferred) or Linux | |
-| **Python Version** | 3.8 or higher | |
-| **Network Driver** | [Npcap](https://nmap.org/npcap/) (Installed in WinPcap API-compatible mode) | |
-| **Privileges** | Administrative / Root access (Required for Raw Sockets) | |
+| Requirement | Specification |
+| :--- | :--- |
+| **Operating System** | Windows 10/11 (Preferred) or Linux |
+| **Python Version** | 3.8 or higher |
+| **Network Driver** | [Npcap](https://nmap.org/npcap/) (Installed in **WinPcap API-compatible** mode) |
+| **Privileges** | **Administrative / Root** access (Required for Raw Packet Sniffing) |
 
 ---
 
@@ -23,79 +23,80 @@ Before initialization, ensure the following environment is prepared:
 Open PowerShell or Command Prompt as **Administrator** in the project root and run:
 ```powershell
 pip install -r requirements.txt
-```
+Step B: Launch the Capture Engine
+Navigate to the project root and execute:
 
-### Step B: Launch the Capture Engine
-Navigate to the `backend/` directory and execute:
-```powershell
-python live_capture.py
-```
-*Note: Keep this window open. It is the heart of the sniffer.*
+PowerShell
+python backend/live_capture.py
+Note: This terminal handles the Scapy sniffer and the Heuristic Engine. Keep it visible during your demo to show live detection logs.
 
-### Step C: Launch the SOC Dashboard
+Step C: Launch the SOC Dashboard
 Open a second terminal in the root directory and execute:
-```powershell
+
+PowerShell
 streamlit run frontend/dashboard.py
-```
+🎮 3. Interactive Demonstration Guide (Viva Mode)
+Follow this professional 4-phase workflow to showcase the full intelligence of NetGuard v2.0:
 
----
+Phase 1: Baseline Telemetry
+Observe the Live Throughput (PPS) line chart to see background network pulses.
 
-## 🎮 3. Interactive Demonstration Guide (Viva Mode)
+Monitor the Protocol Distribution; explain how the system differentiates between TCP (Web/SSH) and UDP (Streaming/DNS).
 
-To showcase NetGuard's capabilities to examiners, follow this recommended workflow:
+Verify Active Source Nodes to see how many unique devices are currently interacting with your NIC.
 
-### Phase 1: Baseline Monitoring
-- Observe the **Real-Time Throughput** line chart.
-- Note the **Protocol Distribution** (TCP/UDP/ICMP/DNS) as background traffic flows.
-- Verify the **Active Source Nodes** count matches the devices on your network.
+Phase 2: Cyber Attack Simulation
+Launch the trigger_attacks.bat script.
 
-### Phase 2: Cyber Attack Simulation
-1. Open the provided `trigger_attacks.bat` script.
-2. Select **Option 2 (SSH Brute Force Simulation)**.
-3. Observe the **Instant Toast Notification** on the Dashboard.
-4. Verify that the **Critical Events** metric has incremented.
+Select Option 2 (SSH Brute Force) or Option 1 (Port Scan).
 
-### Phase 3: Forensic Intelligence
-1. Navigate to the **Threat Intelligence** tab in the Dashboard.
-2. Identify the Attacker IP and the specific threat classification (e.g., *Brute Force* or *Port Scan*).
-3. Use the **Export Intelligence** buttons in the sidebar to generate a CSV audit report.
+Observe the Real-Time Toast Notification and the immediate jump in the Critical Events metric.
 
----
+Show the Host Risk Scoring bar chart; point out how the Attacker IP has instantly gained a high "Danger Score."
 
-## ⚙️ 4. Calibration & Sensitivity
+Phase 3: Deep Packet Analysis (DPI)
+Navigate to the Deep Packet Dissector tab.
 
-You can adjust the engine's behavior in real-time via the Sidebar:
-- **Port Scan Limit**: Lower this to `2` for a fast demo, or set to `15+` for a stable production environment.
-- **Refresh Rate**: Set to `1s` for high-speed live monitoring or `5s+` to reduce system overhead.
-- **Traffic Spike Limit**: Adjust the threshold for Denial of Service (DoS) detection.
+Select "Incident Logs" as your data source to focus only on malicious traffic.
 
----
+Pick a high-risk ID from the dropdown to perform Layer 7 Inspection.
 
-## 🔍 5. Troubleshooting (FAQ)
+Analyze the Payload: Explain how the ASCII decoder translates raw hex into human-readable text.
 
-- **Metric "Total Captured" is 0**: Ensure `live_capture.py` is running as Admin. If using a VPN, disable it, as some VPNs block raw packet access to the physical NIC.
-- **Dashboard "Stuck" or Lagging**: Click the **🚨 Purge Session Data** button in the sidebar. This clears the SQLite WAL logs and resets the UI cache.
-- **Local Scan Not Appearing**: If scanning `127.0.0.1`, ensure the **Npcap Loopback Adapter** is selected in your system settings. For best results, scan your machine's **LAN IP** (found via `ipconfig`).
+Expert Tip: Point out that "Header-only" frames (empty payloads) prove a Reconnaissance Scan is occurring, as no data is being exchanged yet.
 
----
+Phase 4: Forensic Export
+Use the Download Incident Logs button in the sidebar.
 
-## 📜 6. Project Architecture Diagram
+Open the generated CSV to show the examiner how NetGuard creates a permanent audit trail for security compliance.
 
-```text
+⚙️ 4. Calibration & Sensitivity (SOC Tuning)
+Fine-tune the engine's "Aggression" via the Sidebar sliders:
+
+Port Scan Limit: Set to 3 for a highly sensitive demo or 10+ to ignore common network noise.
+
+SSH Brute Force Limit: Adjust the number of failed attempts allowed on Port 22 before a High Severity alert is triggered.
+
+Telemetry Refresh: Set to 1s for "Live" movement or 5s+ to reduce system CPU overhead.
+
+🔍 5. Troubleshooting & Expert Tips
+Error: no column 'raw_payload': This occurs if an old database exists. Delete alerts.db to allow the new schema to initialize with the DPI column.
+
+Missing Metrics: Ensure live_capture.py is running as Admin. If using a VPN, disable it, as some VPNs block raw packet access to the physical NIC.
+
+Dashboard Lag: If the UI is slow, increase the Telemetry Refresh slider or click Purge Session Data to clear the SQLite WAL logs.
+
+📜 6. Project Architecture Diagram (L7 Enhanced)
+Plaintext
 [ Network Interface Card ] 
           │
           ▼
-[ Scapy Sniffer (backend/) ] ──► [ Heuristic Detector (core/) ]
+[ live_capture.py (Scapy) ] ──► [ Decapsulation: L2 -> L3 -> L4 ]
           │                             │
           ▼                             ▼
-[ SQLite Database (WAL Mode) ] ◄── [ Alert Logs (logs/) ]
+[ SQLite DB (raw_payload) ] ◄── [ Heuristic Engine (Scoring) ]
           │
           ▼
-[ Streamlit Dashboard (frontend/) ] ──► [ CSV Export ]
-```
-
----
-**Developed by:** Chriszpaul
-**Version:** 2.0.0 (Stable)
-```
-
+[ Streamlit Dashboard ] ──► [ L7 Deep Packet Dissector ] ──► [ CSV Export ]
+Developed by: Chriszpaul
+Version: 2.0.0 (Unified SOC Edition)
