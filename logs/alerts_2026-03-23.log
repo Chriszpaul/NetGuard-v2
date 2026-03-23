@@ -329,3 +329,10 @@
 [13:13:49] WARNING | Medium: Suspicious Port Probing from 172.64.41.3 | 172.64.41.3
 [13:13:50] WARNING | Medium: Suspicious Port Probing from 8.8.4.4 | 8.8.4.4
 [13:13:51] CRITICAL | High: Port Scan Detected from 10.186.171.135 (3 ports) | 10.186.171.135
+[23:56:42] WARNING | Medium: Suspicious Port Probing from 16.145.249.71 | 16.145.249.71
+[23:56:45] WARNING | Medium: Suspicious Port Probing from 35.237.69.59 | 35.237.69.59
+[23:57:23] WARNING | Medium: Suspicious Port Probing from 8.8.8.8 | 8.8.8.8
+[23:57:59] WARNING | Medium: Suspicious Port Probing from 10.186.171.135 | 10.186.171.135
+[23:58:00] WARNING | Medium: Suspicious Port Probing from 8.8.8.8 | 8.8.8.8
+[23:58:57] WARNING | Medium: Suspicious Port Probing from 10.186.171.135 | 10.186.171.135
+[23:58:57] CRITICAL | High: Port Scan Detected from 8.8.8.8 (3 ports) | 8.8.8.8

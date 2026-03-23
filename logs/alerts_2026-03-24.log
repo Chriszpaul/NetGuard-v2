@@ -1,0 +1,140 @@
+[00:00:03] WARNING | Medium: Suspicious Port Probing from 10.186.171.135 | 10.186.171.135
+[00:00:27] CRITICAL | High: Port Scan Detected from 8.8.8.8 (3 ports) | 8.8.8.8
+[00:00:38] WARNING | Medium: Suspicious Port Probing from 10.186.171.135 | 10.186.171.135
+[00:00:38] WARNING | Medium: Suspicious Port Probing from 20.42.65.94 | 20.42.65.94
+[00:00:54] WARNING | Medium: Suspicious Port Probing from 10.186.171.135 | 10.186.171.135
+[00:00:54] WARNING | Medium: Suspicious Port Probing from 8.8.8.8 | 8.8.8.8
+[00:01:33] CRITICAL | High: Port Scan Detected from 8.8.8.8 (3 ports) | 8.8.8.8
+[00:02:08] CRITICAL | High: Port Scan Detected from 8.8.8.8 (3 ports) | 8.8.8.8
+[00:02:46] WARNING | Medium: Suspicious Port Probing from 16.145.249.71 | 16.145.249.71
+[00:03:03] WARNING | Medium: Suspicious Port Probing from 16.145.249.71 | 16.145.249.71
+[00:03:19] WARNING | Medium: Suspicious Port Probing from 10.186.171.135 | 10.186.171.135
+[00:03:49] WARNING | Medium: Suspicious Port Probing from 16.145.249.71 | 16.145.249.71
+[00:04:27] WARNING | Medium: Suspicious Port Probing from 10.186.171.135 | 10.186.171.135
+[00:04:33] WARNING | Medium: Suspicious Port Probing from 16.145.249.71 | 16.145.249.71
+[00:05:20] WARNING | Medium: Suspicious Port Probing from 10.186.171.135 | 10.186.171.135
+[00:05:25] CRITICAL | High: Port Scan Detected from 8.8.8.8 (3 ports) | 8.8.8.8
+[00:05:26] WARNING | Medium: Suspicious Port Probing from 35.237.69.59 | 35.237.69.59
+[00:05:27] WARNING | Medium: Suspicious Port Probing from 44.231.184.99 | 44.231.184.99
+[00:05:28] WARNING | Medium: Suspicious Port Probing from 8.8.8.8 | 8.8.8.8
+[00:05:53] WARNING | Medium: Suspicious Port Probing from 10.186.171.135 | 10.186.171.135
+[00:05:53] CRITICAL | High: Port Scan Detected from 8.8.8.8 (3 ports) | 8.8.8.8
+[00:06:59] WARNING | Medium: Suspicious Port Probing from 10.186.171.135 | 10.186.171.135
+[00:07:31] WARNING | Medium: Suspicious Port Probing from 10.186.171.135 | 10.186.171.135
+[00:07:31] CRITICAL | High: Port Scan Detected from 8.8.8.8 (3 ports) | 8.8.8.8
+[00:08:00] WARNING | Medium: Suspicious Port Probing from 10.186.171.135 | 10.186.171.135
+[00:08:19] WARNING | Medium: Suspicious Port Probing from 10.186.171.135 | 10.186.171.135
+[00:09:17] WARNING | Medium: Suspicious Port Probing from 10.186.171.135 | 10.186.171.135
+[00:09:46] WARNING | Medium: Suspicious Port Probing from 16.145.249.71 | 16.145.249.71
+[00:09:47] WARNING | Medium: Suspicious Port Probing from 10.186.171.135 | 10.186.171.135
+[00:10:06] WARNING | Medium: Suspicious Port Probing from 10.186.171.135 | 10.186.171.135
+[00:10:28] WARNING | Medium: Suspicious Port Probing from 10.186.171.135 | 10.186.171.135
+[00:10:29] CRITICAL | High: Port Scan Detected from 8.8.8.8 (3 ports) | 8.8.8.8
+[00:10:30] WARNING | Medium: Suspicious Port Probing from 35.237.69.59 | 35.237.69.59
+[00:10:37] WARNING | Medium: Suspicious Port Probing from 8.8.8.8 | 8.8.8.8
+[00:11:20] WARNING | Medium: Suspicious Port Probing from 10.186.171.135 | 10.186.171.135
+[00:11:48] WARNING | Medium: Suspicious Port Probing from 10.186.171.135 | 10.186.171.135
+[00:18:20] CRITICAL | High: Port Scan Detected from 10.186.171.135 (3 ports) | 10.186.171.135
+[00:20:47] WARNING | Medium: Suspicious Port Probing from 8.8.8.8 | 8.8.8.8
+[00:20:47] WARNING | Medium: Suspicious Port Probing from 10.186.171.135 | 10.186.171.135
+[00:20:55] WARNING | Medium: Suspicious Port Probing from 16.145.249.71 | 16.145.249.71
+[00:21:11] WARNING | Medium: Suspicious Port Probing from 16.145.249.71 | 16.145.249.71
+[00:21:19] WARNING | Medium: Suspicious Port Probing from 10.186.171.135 | 10.186.171.135
+[00:21:58] WARNING | Medium: Suspicious Port Probing from 16.145.249.71 | 16.145.249.71
+[00:22:00] WARNING | Medium: Suspicious Port Probing from 10.186.171.135 | 10.186.171.135
+[00:23:42] WARNING | Medium: Suspicious Port Probing from 10.186.171.135 | 10.186.171.135
+[00:23:42] WARNING | Medium: Suspicious Port Probing from 8.8.8.8 | 8.8.8.8
+[00:23:43] WARNING | Medium: Suspicious Port Probing from 140.82.113.22 | 140.82.113.22
+[00:24:21] WARNING | Medium: Suspicious Port Probing from 10.186.171.135 | 10.186.171.135
+[00:24:39] WARNING | Medium: Suspicious Port Probing from 10.186.171.135 | 10.186.171.135
+[00:25:29] WARNING | Medium: Suspicious Port Probing from 8.8.8.8 | 8.8.8.8
+[00:25:31] CRITICAL | High: Port Scan Detected from 8.8.8.8 (3 ports) | 8.8.8.8
+[00:25:33] WARNING | Medium: Suspicious Port Probing from 10.186.171.135 | 10.186.171.135
+[00:25:34] WARNING | Medium: Suspicious Port Probing from 13.107.5.93 | 13.107.5.93
+[00:26:18] WARNING | Medium: Suspicious Port Probing from 10.186.171.135 | 10.186.171.135
+[00:26:19] CRITICAL | High: Port Scan Detected from 8.8.8.8 (3 ports) | 8.8.8.8
+[00:26:30] WARNING | Medium: Suspicious Port Probing from 8.8.8.8 | 8.8.8.8
+[00:27:44] WARNING | Medium: Suspicious Port Probing from 16.145.249.71 | 16.145.249.71
+[00:27:51] CRITICAL | High: Port Scan Detected from 16.145.249.71 (3 ports) | 16.145.249.71
+[00:27:59] WARNING | Medium: Suspicious Port Probing from 10.186.171.135 | 10.186.171.135
+[00:28:44] CRITICAL | High: Port Scan Detected from 8.8.8.8 (3 ports) | 8.8.8.8
+[00:29:19] WARNING | Medium: Suspicious Port Probing from 10.186.171.135 | 10.186.171.135
+[00:30:22] WARNING | Medium: Suspicious Port Probing from 20.42.65.88 | 20.42.65.88
+[00:30:24] WARNING | Medium: Suspicious Port Probing from 10.186.171.135 | 10.186.171.135
+[00:30:24] WARNING | Medium: Suspicious Port Probing from 8.8.8.8 | 8.8.8.8
+[00:30:49] WARNING | Medium: Suspicious Port Probing from 8.8.8.8 | 8.8.8.8
+[00:31:41] WARNING | Medium: Suspicious Port Probing from 8.8.8.8 | 8.8.8.8
+[00:31:59] WARNING | Medium: Suspicious Port Probing from 10.186.171.135 | 10.186.171.135
+[00:32:40] WARNING | Medium: Suspicious Port Probing from 10.186.171.135 | 10.186.171.135
+[00:33:33] WARNING | Medium: Suspicious Port Probing from 10.186.171.135 | 10.186.171.135
+[00:33:33] WARNING | Medium: Suspicious Port Probing from 8.8.8.8 | 8.8.8.8
+[00:33:34] WARNING | Medium: Suspicious Port Probing from 140.82.112.21 | 140.82.112.21
+[00:33:54] WARNING | Medium: Suspicious Port Probing from 20.189.173.23 | 20.189.173.23
+[00:33:56] WARNING | Medium: Suspicious Port Probing from 10.186.171.135 | 10.186.171.135
+[00:33:56] CRITICAL | High: Port Scan Detected from 8.8.8.8 (3 ports) | 8.8.8.8
+[00:33:57] WARNING | Medium: Suspicious Port Probing from 140.82.113.22 | 140.82.113.22
+[00:33:58] WARNING | Medium: Suspicious Port Probing from 8.8.8.8 | 8.8.8.8
+[00:35:12] WARNING | Medium: Suspicious Port Probing from 1.1.1.1 | 1.1.1.1
+[00:35:12] WARNING | Medium: Suspicious Port Probing from 10.186.171.135 | 10.186.171.135
+[00:35:13] WARNING | Medium: Suspicious Port Probing from 20.189.173.25 | 20.189.173.25
+[00:35:14] CRITICAL | High: Port Scan Detected from 1.1.1.1 (3 ports) | 1.1.1.1
+[00:35:14] WARNING | Medium: Suspicious Port Probing from 8.8.8.8 | 8.8.8.8
+[00:35:14] CRITICAL | High: Port Scan Detected from 8.8.8.8 (4 ports) | 8.8.8.8
+[00:35:18] CRITICAL | High: Port Scan Detected from 1.1.1.1 (4 ports) | 1.1.1.1
+[00:35:23] CRITICAL | High: Port Scan Detected from 8.8.8.8 (3 ports) | 8.8.8.8
+[00:35:24] WARNING | Medium: Suspicious Port Probing from 35.237.69.59 | 35.237.69.59
+[00:35:24] CRITICAL | High: Port Scan Detected from 35.237.69.59 (4 ports) | 35.237.69.59
+[00:35:28] WARNING | Medium: Suspicious Port Probing from 1.1.1.1 | 1.1.1.1
+[00:35:28] WARNING | Medium: Suspicious Port Probing from 10.186.171.135 | 10.186.171.135
+[00:39:32] Medium | Medium: Suspicious Port Probing from 8.8.8.8 | 8.8.8.8
+[00:39:32] Medium | Medium: Suspicious Port Probing from 20.42.73.30 | 20.42.73.30
+[00:39:34] Medium | Medium: Suspicious Port Probing from 140.82.114.22 | 140.82.114.22
+[00:39:57] Medium | Medium: Suspicious Port Probing from 10.186.171.135 | 10.186.171.135
+[00:41:01] Medium | Medium: Suspicious Port Probing from 8.8.8.8 | 8.8.8.8
+[00:41:01] High | High: Port Scan Detected from 8.8.8.8 (3 ports) | 8.8.8.8
+[00:43:19] Medium | Medium: Suspicious Port Probing from 10.186.171.135 | 10.186.171.135
+[00:43:20] Medium | Medium: Suspicious Port Probing from 8.8.8.8 | 8.8.8.8
+[00:43:22] Medium | Medium: Suspicious Port Probing from 140.82.112.22 | 140.82.112.22
+[00:43:23] Medium | Medium: Suspicious Port Probing from 52.182.143.211 | 52.182.143.211
+[00:43:37] Medium | Medium: Suspicious Port Probing from 10.186.171.135 | 10.186.171.135
+[00:43:37] Medium | Medium: Suspicious Port Probing from 8.8.8.8 | 8.8.8.8
+[00:43:37] High | High: Port Scan Detected from 8.8.8.8 (3 ports) | 8.8.8.8
+[00:43:38] Medium | Medium: Suspicious Port Probing from 1.1.1.1 | 1.1.1.1
+[00:43:38] Medium | Medium: Suspicious Port Probing from 104.208.16.91 | 104.208.16.91
+[00:44:10] Medium | Medium: Suspicious Port Probing from 10.186.171.135 | 10.186.171.135
+[00:44:57] Medium | Medium: Suspicious Port Probing from 35.237.69.59 | 35.237.69.59
+[00:44:58] Medium | Medium: Suspicious Port Probing from 10.186.171.135 | 10.186.171.135
+[00:44:58] Medium | Medium: Suspicious Port Probing from 8.8.8.8 | 8.8.8.8
+[00:45:00] Medium | Medium: Suspicious Port Probing from 140.82.114.22 | 140.82.114.22
+[00:45:18] Medium | Medium: Suspicious Port Probing from 10.186.171.135 | 10.186.171.135
+[00:45:18] Medium | Medium: Suspicious Port Probing from 8.8.8.8 | 8.8.8.8
+[00:45:22] Medium | Medium: Suspicious Port Probing from 52.167.249.196 | 52.167.249.196
+[00:45:28] High | High: Port Scan Detected from 8.8.8.8 (3 ports) | 8.8.8.8
+[00:45:44] Medium | Medium: Suspicious Port Probing from 35.237.69.59 | 35.237.69.59
+[00:45:59] Medium | Medium: Suspicious Port Probing from 10.186.171.135 | 10.186.171.135
+[00:46:01] High | High: Port Scan Detected from 8.8.8.8 (3 ports) | 8.8.8.8
+[00:46:02] High | High: Port Scan Detected from 10.186.171.135 (3 ports) | 10.186.171.135
+[00:46:19] Medium | Medium: Suspicious Port Probing from 10.186.171.135 | 10.186.171.135
+[00:46:20] Medium | Medium: Suspicious Port Probing from 8.8.8.8 | 8.8.8.8
+[00:46:30] Medium | Medium: Suspicious Port Probing from 35.237.69.59 | 35.237.69.59
+[00:47:28] Medium | Medium: Suspicious Port Probing from 10.186.171.135 | 10.186.171.135
+[00:47:28] Medium | Medium: Suspicious Port Probing from 52.182.143.210 | 52.182.143.210
+[00:47:33] Medium | Medium: Suspicious Port Probing from 8.8.8.8 | 8.8.8.8
+[00:48:21] Medium | Medium: Suspicious Port Probing from 10.186.171.135 | 10.186.171.135
+[00:48:21] High | High: Port Scan Detected from 8.8.8.8 (3 ports) | 8.8.8.8
+[00:48:32] Medium | Medium: Suspicious Port Probing from 8.8.8.8 | 8.8.8.8
+[00:48:33] Medium | Medium: Suspicious Port Probing from 1.1.1.1 | 1.1.1.1
+[00:49:20] Medium | Medium: Suspicious Port Probing from 20.50.201.203 | 20.50.201.203
+[00:49:20] Medium | Medium: Suspicious Port Probing from 10.186.171.135 | 10.186.171.135
+[00:49:23] Medium | Medium: Suspicious Port Probing from 8.8.8.8 | 8.8.8.8
+[00:49:25] Medium | Medium: Suspicious Port Probing from 140.82.113.21 | 140.82.113.21
+[00:49:39] Medium | Medium: Suspicious Port Probing from 10.186.171.135 | 10.186.171.135
+[00:50:02] Medium | Medium: Suspicious Port Probing from 35.237.69.59 | 35.237.69.59
+[00:50:02] High | High: Port Scan Detected from 35.237.69.59 (3 ports) | 35.237.69.59
+[00:50:16] Medium | Medium: Suspicious Port Probing from 10.186.171.135 | 10.186.171.135
+[00:50:19] Medium | Medium: Suspicious Port Probing from 8.8.8.8 | 8.8.8.8
+[00:50:27] Medium | Medium: Suspicious Port Probing from 54.245.152.225 | 54.245.152.225
+[00:50:39] Medium | Medium: Suspicious Port Probing from 10.186.171.135 | 10.186.171.135
+[00:51:02] Medium | Medium: Suspicious Port Probing from 10.186.171.135 | 10.186.171.135
+[00:51:02] High | High: Port Scan Detected from 8.8.8.8 (3 ports) | 8.8.8.8
+[00:51:31] High | High: Port Scan Detected from 8.8.8.8 (3 ports) | 8.8.8.8
