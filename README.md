@@ -11,60 +11,137 @@ NetGuard v2.0 is a professional-grade **Network Intrusion Detection System (NIDS
 
 ---
 
-## 🚀 Key Highlights
+## 📋 Table of Contents
 
-* **🔍 Deep Packet Dissector**: Wireshark-style forensic tool to inspect raw hex payloads and TCP/IP metadata.
-* **🧠 Heuristic Engine**: Automated detection of Port Scans, SSH Brute Force, and Traffic Spikes.
-* **📈 Live SOC Analytics**: Real-time PPS (Packets Per Second) throughput graphs and protocol distribution.
-* **⚖️ Dynamic Risk Scoring**: Weighted threat levels (High/Medium/Low) assigned to every network node.
-* **⚡ High-Performance Backend**: Multi-threaded Scapy engine with SQLite WAL-mode for concurrent data processing.
+- [What is This?](#-what-is-this)
+- [Key Highlights](#-key-highlights)
+- [What Can It Detect?](#-what-can-it-detect)
+- [Tech Stack](#️-tech-stack)
+- [Project Structure](#-project-structure)
+- [Getting Started](#-getting-started)
+- [How to Use](#-how-to-use)
 
 ---
 
-## 🛡️ Detection Capabilities
+## ❓ What is This?
 
-| Attack Type | Detection Logic | Severity |
+NetGuard v2.0 is a **student project** that combines network packet sniffing with real-time threat detection. It monitors incoming network traffic, identifies suspicious activity (like port scans or brute force attacks), and displays everything in a nice dashboard. Think of it as a mini version of professional security monitoring tools—but built from scratch!
+
+### Why I Built This
+- Learn how network packets work (Wireshark-style inspection)
+- Understand heuristic-based threat detection
+- Build a real-time dashboard with live data
+- Practice Python, databases, and UI development
+
+---
+
+## 🚀 Key Highlights
+
+* **🔍 Deep Packet Dissector**: Inspect raw hex payloads and TCP/IP metadata like Wireshark
+* **🧠 Heuristic Engine**: Automatically detect Port Scans, SSH Brute Force, and Traffic Spikes
+* **📈 Live SOC Analytics**: Real-time graphs showing packets per second and protocol breakdown
+* **⚖️ Dynamic Risk Scoring**: Assigns threat levels (High/Medium/Low) to network activity
+* **⚡ High-Performance Backend**: Multi-threaded packet capture with SQLite database for storing events
+
+---
+
+## 🛡️ What Can It Detect?
+
+| Attack Type | How It Works | Severity |
 | :--- | :--- | :--- |
-| **Port Scanning** | Detects unique destination port hits from a single source. | **Medium/High** |
-| **SSH Brute Force** | Tracks high-frequency TCP connection attempts on Port 22. | **CRITICAL** |
-| **Traffic Spike** | Identifies volumetric anomalies and potential DoS flooding. | **Warning** |
-| **Reconnaissance** | Flags header-only frames (SYN/ACK) with no data payload. | **Info** |
+| **Port Scanning** | Detects when someone tries many different ports from the same IP | Medium/High |
+| **SSH Brute Force** | Flags multiple failed login attempts on SSH (port 22) | CRITICAL |
+| **Traffic Spike** | Identifies sudden floods of packets (potential DoS attack) | Warning |
+| **Reconnaissance** | Spots empty packets (just headers, no data) often used for probing | Info |
 
 ---
 
 ## 🛠️ Tech Stack
 
-* **Engine:** Python & [Scapy](https://scapy.net/) (Raw Packet Sniffing)
-* **Dashboard:** [Streamlit](https://streamlit.io/) (Security UI)
-* **Data:** Pandas & NumPy (Telemetry Aggregation)
-* **Storage:** SQLite3 (Transactional Threat Intelligence)
-* **Driver:** Npcap (Windows Packet Capture Library)
+* **Engine:** Python & [Scapy](https://scapy.net/) (packet sniffing)
+* **Dashboard:** [Streamlit](https://streamlit.io/) (web UI)
+* **Data Processing:** Pandas & NumPy (analyzing packet data)
+* **Storage:** SQLite3 (storing detected threats)
+* **Packet Capture:** Npcap (Windows driver for capturing packets)
 
 ---
 
 ## 📂 Project Structure
 
-```text
+```
 NetGuard-v2.0/
-├── backend/          # Scapy Capture Engine (live_capture.py)
-├── core/             # Heuristics, Database Schema, & Detector Logic
-├── frontend/         # Streamlit SOC Dashboard Implementation
-├── logs/             # Automated Security Audit Trails (TXT)
-└── screenshots/      # UI Visuals & Forensic Evidence
-🔧 Getting Started
-1. Prerequisites
-Install Npcap (Install with "WinPcap API Compatibility" checked).
+├── backend/          # Packet capture engine (live_capture.py)
+├── core/             # Detection logic and database setup
+├── frontend/         # Streamlit dashboard
+├── logs/             # Security event logs
+└── screenshots/      # Dashboard screenshots
+```
 
-Python 3.8 or higher.
+---
 
-2. Installation
-Bash
+## 🔧 Getting Started
+
+### 1. Prerequisites
+
+You'll need:
+- **Python 3.8 or higher** ([Download here](https://www.python.org/downloads/))
+- **Npcap** for Windows packet capture ([Download here](https://npcap.com/))
+  - During installation, make sure to check "Install WinPcap API Compatibility"
+- **Admin/Administrator access** (required to capture network packets)
+
+### 2. Installation
+
+```bash
 # Clone the repository
-git clone [https://github.com/your-username/NetGuard-v2.0.git](https://github.com/your-username/NetGuard-v2.0.git)
+git clone https://github.com/Chriszpaul/NetGuard-v2.git
 
-# Install core dependencies
+# Navigate to the project folder
+cd NetGuard-v2
+
+# Install required Python libraries
 pip install -r requirements.txt
-3. Execution
-Start Sniffer (Admin): python backend/live_capture.py
+```
 
-Launch Dashboard: streamlit run frontend/dashboard.py
+### 3. Running the Project
+
+**Step 1: Start the packet sniffer (run as Administrator)**
+```bash
+python backend/live_capture.py
+```
+You should see output like: `[*] Starting packet capture...`
+
+**Step 2: Launch the dashboard (in a new terminal)**
+```bash
+streamlit run frontend/dashboard.py
+```
+The dashboard will open in your browser at `http://localhost:8501`
+
+---
+
+## 📊 How to Use
+
+1. **Start the sniffer first** (it runs in the background capturing packets)
+2. **Open the dashboard** to see live threat detection in real-time
+3. **Check the logs folder** to see all detected threats saved as text files
+4. **Inspect packets** using the Deep Packet Dissector to see raw hex data
+
+### Common Issues
+
+- **"Permission Denied" error?** → Run the terminal as Administrator
+- **"No module named scapy"?** → Run `pip install -r requirements.txt` again
+- **Dashboard won't connect?** → Make sure the sniffer is running first
+
+---
+
+## 🎓 What I Learned
+
+This project helped me understand:
+- How to capture and parse network packets at the byte level
+- Building a real-time data pipeline (capture → analyze → display)
+- Creating a web dashboard with live updates (Streamlit)
+- Designing detection logic for common attacks
+- Working with databases for storing security events
+
+---
+
+**Questions or ideas?** Feel free to open an issue! 😊
