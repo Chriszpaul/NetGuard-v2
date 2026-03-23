@@ -34,7 +34,7 @@ goto menu
 :sshbrute
 echo [!] Simulating SSH Brute Force on Port 22...
 :: Uses PowerShell to hit Port 22 ten times rapidly
-powershell -Command "1..12 | ForEach-Object { echo 'Attempting Connection...'; Test-NetConnection -ComputerName 127.0.0.1 -Port 22 }"
+powershell -Command "1..12 | ForEach-Object { echo 'Attempting Connection...'; Test-NetConnection -ComputerName 10.186.171.135 -Port 22 }"
 echo.
 echo [OK] Brute Force Simulation Finished.
 pause
