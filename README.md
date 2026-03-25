@@ -1,28 +1,38 @@
 # NetGuard
 
-## Project Purpose/Use Cases
-NetGuard is designed to protect users from potential network threats by providing real-time monitoring and filtering of incoming and outgoing traffic. The primary use cases include:
-- Protecting personal data on public networks.
-- Monitoring web traffic for suspicious activity.
-- Blocking harmful sites and applications.
-- Providing insights into network performance and usage.
+## Tools Used
+- Python
+- OpenCV
+- TensorFlow
+- Flask
 
-## Features
-- Real-time traffic analysis
-- Customizable filtering rules
-- User-friendly interface
+## Detection Method
+NetGuard uses advanced image processing and machine learning techniques to detect vulnerabilities in network configurations. By analyzing network traffic, it identifies potential security threats and provides insights to improve overall security posture.
+
+## Project Structure
+- **NetGuard/**: Contains the main application files.
+  - **static/**: Holds static files like images and CSS.
+  - **templates/**: Holds HTML templates used for rendering webpages.
+  - **app.py**: The main application file.
 
 ## Installation
-To install NetGuard, follow these steps:
-1. Download the latest version from the releases page.
-2. Extract the files to your preferred directory.
-3. Run the application and follow the setup instructions.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Chriszpaul/NetGuard-v2.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd NetGuard-v2
+   ```
+3. Install the required packages:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
 ## Usage
-To use NetGuard, simply launch the application and configure the desired settings through the user interface. You can enable or disable features as needed and view traffic logs to monitor activity.
-
-## License
-This project is licensed under the MIT License.
-
-## Acknowledgments
-- Special thanks to all contributors and the open-source community for their support.
+1. Run the application:
+   ```bash
+   python app.py
+   ```
+2. Open your browser and go to `http://127.0.0.1:5000` to access the interface.
+3. Follow the prompts to scan your network and view results.
