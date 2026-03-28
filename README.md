@@ -3,8 +3,8 @@
 ## Tools Used
 - Python
 - OpenCV
-- TensorFlow
-- Flask
+- SqlLite
+- Pandas
 
 ## Detection Method
 NetGuard uses advanced image processing and machine learning techniques to detect vulnerabilities in network configurations. By analyzing network traffic, it identifies potential security threats and provides insights to improve overall security posture.
