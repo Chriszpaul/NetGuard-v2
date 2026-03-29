@@ -68,7 +68,7 @@ NetGuard-v2.0/
 
 ---
 
-### 🔍 How it Works (The 3-Step Process)
+###  How it Works (The 3-Step Process)
 
 1.  **Capture (The Ears)**: Using **Npcap** and **Scapy**, the system "listens" to every packet moving through your network card. It ignores the noise and focuses on **IP Addresses** and **Port Numbers**.
 2.  **Analyze (The Brain)**: Every packet is checked against our **Heuristic Rules**. If a single IP address starts acting weird (like trying to hit 20 ports in 1 second), the system calculates a **Risk Score**.
