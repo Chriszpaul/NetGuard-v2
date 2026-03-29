@@ -24,7 +24,6 @@ The system uses **Heuristic-based Detection** (Behavioral Analysis) to identify 
 
 ---
 
-
 ### 📂 Project Structure
 ```text
 NetGuard-v2.0/
@@ -35,31 +34,4 @@ NetGuard-v2.0/
 ├── run_tool.bat      # Main One-Click Launcher (Admin)
 ├── trigger_attacks.bat # Demo Attack Simulator
 └── requirements.txt  # Python Dependencies
-
-
----
-
-HOW TO RUN NETGUARD V2.0
-========================
-
-1. INSTALL PREREQUISITES:
-   - Install Python 3.8+
-   - Install Npcap (https://nmap.org/npcap/)
-     *IMPORTANT: Check "WinPcap API-compatible Mode" during installation.
-
-2. INSTALL DEPENDENCIES:
-   Open Command Prompt in the project folder and run:
-   pip install -r requirements.txt
-
-3. START THE SYSTEM:
-   - Right-click "run_tool.bat"
-   - Select "Run as Administrator"
-   (This starts the sniffer and the dashboard automatically).
-
-4. SIMULATE ATTACKS (DEMO):
-   - While the dashboard is open, run "trigger_attacks.bat"
-   - Check the "Incident Logs" tab for live alerts.
-
-5. SHUTDOWN:
-   - Close the command prompt window to stop all processes.
 
