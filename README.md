@@ -54,9 +54,14 @@ NetGuard-v2.0/
    - Select "Run as **Administrator**"
    (This starts the sniffer and the dashboard automatically).
 
-4. SIMULATE ATTACKS (DEMO):
-   - While the dashboard is open, run "trigger_attacks.bat"
-   - Check the "Incident Logs" tab for live alerts.
-
-5. SHUTDOWN:
+4. **SHUTDOWN**:
    - Close the command prompt window to stop all processes.
+
+---
+
+🌟 Future Plans
+* **Smart Detection**: Using AI to learn what "Normal" traffic looks like.
+
+* **Auto-Block**: Automatically "banning" a hacker's IP instead of just showing an alert.
+
+* **Phone Alerts**: Sending a WhatsApp or SMS when a high-risk attack is found.
