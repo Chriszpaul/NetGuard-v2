@@ -1,11 +1,11 @@
-# 🛡️ NetGuard v2.0: Unified SOC & IDS Dashboard
+#  NetGuard v2.0: Unified SOC & IDS Dashboard
 
-### 📝 Project Description
+###  Project Description
 NetGuard v2.0 is a **Network Intrusion Detection System (NIDS)** and **Security Operations Center (SOC)** dashboard developed as a KTU Mini Project. The system provides real-time monitoring of network traffic to identify and visualize cyber threats. By combining behavioral analysis with deep inspection, it allows administrators to detect attacks and investigate the raw data hidden inside network packets.
 
 ---
 
-### 🧠 Detection Method (Heuristics)
+###  Detection Method 
 The system uses **Heuristic-based Detection** (Behavioral Analysis) to identify threats. Instead of looking for a specific "virus file," it looks for suspicious actions:
 
 1.  **Port Scanning**: Flags an IP if it connects to more unique ports than the defined *Port Scan Limit*.
@@ -15,7 +15,7 @@ The system uses **Heuristic-based Detection** (Behavioral Analysis) to identify 
 
 ---
 
-### 🛠️ Tools & Technologies Used
+###  Tools & Technologies Used
 * **Language**: Python 3.8+ (Core Logic & Data Processing)
 * **Traffic Sniffing**: **Scapy** (Packet manipulation) & **Npcap** (Raw packet driver)
 * **Frontend**: **Streamlit** (Interactive SOC Dashboard)
@@ -24,7 +24,7 @@ The system uses **Heuristic-based Detection** (Behavioral Analysis) to identify 
 
 ---
 
-### 📂 Project Structure
+###  Project Structure
 ```bash
 NetGuard-v2.0/
 ├── backend/          # Sniffer Engine (live_capture.py)
@@ -59,9 +59,18 @@ NetGuard-v2.0/
 
 ---
 
-🌟 Future Plans
+### Future Plans
 * **Smart Detection**: Using AI to learn what "Normal" traffic looks like.
 
 * **Auto-Block**: Automatically "banning" a hacker's IP instead of just showing an alert.
 
 * **Phone Alerts**: Sending a WhatsApp or SMS when a high-risk attack is found.
+
+---
+
+### 🔍 How it Works (The 3-Step Process)
+
+1.  **Capture (The Ears)**: Using **Npcap** and **Scapy**, the system "listens" to every packet moving through your network card. It ignores the noise and focuses on **IP Addresses** and **Port Numbers**.
+2.  **Analyze (The Brain)**: Every packet is checked against our **Heuristic Rules**. If a single IP address starts acting weird (like trying to hit 20 ports in 1 second), the system calculates a **Risk Score**.
+3.  **Visualize (The Face)**: The results are saved into a **Database** and instantly displayed on the **Streamlit Dashboard**. You see the live graphs move and the "High Risk" red alerts appear the moment an attack is detected.
+
