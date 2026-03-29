@@ -40,18 +40,18 @@ NetGuard-v2.0/
 
 ### How To Run NetGuard
 
-1. INSTALL PREREQUISITES:
+1. **INSTALL PREREQUISITES**:
    - Install Python 3.8+
    - Install Npcap ([https://nmap.org/npcap/](https://nmap.org/npcap/))
-     *IMPORTANT: Check "WinPcap API-compatible Mode" during installation.
+     ***IMPORTANT**: Check "WinPcap API-compatible Mode" during installation.
 
-2. INSTALL DEPENDENCIES:
+2. **INSTALL DEPENDENCIES**:
    Open Command Prompt in the project folder and run:
    pip install -r requirements.txt
 
-3. START THE SYSTEM:
-   - Right-click "run_tool.bat"
-   - Select "Run as Administrator"
+3. **START THE SYSTEM**:
+   - Right-click "**run_tool.bat**"
+   - Select "Run as **Administrator**"
    (This starts the sniffer and the dashboard automatically).
 
 4. SIMULATE ATTACKS (DEMO):
